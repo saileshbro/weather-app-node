@@ -9,7 +9,7 @@ weatherForm.onsubmit = (e) => {
   const address = document.querySelector('#address').value;
   messageOne.textContent = "Loading...";
   messageTwo.textContent = "";
-  fetch(`http://localhost:3000/weather?address=${address}`)
+  fetch(`/weather?address=${address}`)
     .then(response => {
       return response.json();
     })
